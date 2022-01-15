@@ -16,7 +16,7 @@ iOS动态注入、重签名、hook代码、新增代码、查看图层
 
 ## 破解应用（按需更新）
 
-https://www.onapp.top/declassifiedApps/
+https://www.onapp.top/declassifiedApps
 
 
 ## 相关文档
