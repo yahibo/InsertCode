@@ -45,6 +45,8 @@ cp -rf "$BUILD_APP_PATH/embedded.mobileprovision" "$TEMP_APP_PATH/"
 #获取名称并设置到目标文件中的Info.plist文件中
 TARGET_DISPLAY_NAME=$(/usr/libexec/PlistBuddy -c "Print CFBundleDisplayName" "$TARGET_INFO_PLIST")
 /usr/libexec/PlistBuddy -c "Set :CFBundleDisplayName $TARGET_DISPLAY_NAME" "$TEMP_APP_PATH/Info.plist"
+#删除设备支持字段
+/usr/libexec/PlistBuddy -c "Delete :UISupportedDevices $TARGET_DISPLAY_NAME" "$TEMP_APP_PATH/Info.plist"
 echo "plist路径：$TARGET_INFO_PLIST"
 echo "显示名称：$TARGET_DISPLAY_NAME"
 
